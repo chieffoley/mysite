@@ -1,9 +1,32 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2024-03-04 07:50:49 -0500
+title:  "Welcome to Jekyll"
 categories: jekyll update
 ---
+
+Welcome to my post! This was published on {{ page.date }}.
+
+{% assign myvar = "hi there" %}
+
+{{ myvar }}
+
+{% assign my_list = ["hello", "you"] %}
+
+{% for myvar1 in my_list %}
+   <body> {{ myvar1 }} <\body>
+{% endfor %}
+
+{% for post in site.posts %}
+    <h2>{{ post.title}} <\h2>
+    ## {{ post.title }}
+ {% endfor %}
+
+{% for level in (1..3) %}
+    <h{{level}}>This is an h{{level}} tag!</h{{level}}>
+{% endfor %}
+
+## this is a level 2
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
